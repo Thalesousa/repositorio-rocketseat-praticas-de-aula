@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,8 +9,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #312E28;
-    color: #fff;
+    background: #312e38;
+    color: #FFF;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -20,7 +20,7 @@ export default createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6, strong {
-    font-weight: bold;
+    font-weight: 500;
   }
 
   button {

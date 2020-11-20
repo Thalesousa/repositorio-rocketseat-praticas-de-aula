@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import signUpBackgroundImg from '../../assets/sign-up-background.png';
+import signUpBackground from '../../assets/sign-up-background.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -15,7 +15,7 @@ export const Content = styled.div`
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
+  place-content: center;
 
   width: 100%;
   max-width: 700px;
@@ -28,6 +28,7 @@ export const Content = styled.div`
     h1 {
       margin-bottom: 24px;
     }
+  }
 
     a {
       color: #f4ede8;
@@ -64,6 +65,6 @@ export const Content = styled.div`
 
 export const Background = styled.div`
   flex: 1;
-  background: url(${signUpBackgroundImg}) no-repeat center;
+  background: url(${signUpBackground}) no-repeat center;
   background-size: cover;
 `;

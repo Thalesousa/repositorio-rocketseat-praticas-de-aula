@@ -10,10 +10,9 @@ export const Container = styled.div`
     border-radius: 4px;
     font-size: 14px;
     font-weight: 500;
-    visibility: hidden;
-
     opacity: 0;
     transition: opacity 0.4s;
+    visibility: hidden;
 
     position: absolute;
     bottom: calc(100% + 12px);
@@ -30,13 +29,12 @@ export const Container = styled.div`
       top: 100%;
       position: absolute;
       left: 50%;
-      bottom: 20px;
       transform: translateX(-50%);
     }
   }
 
   &:hover span {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
   }
 `;

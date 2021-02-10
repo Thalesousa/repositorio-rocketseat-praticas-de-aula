@@ -2,11 +2,12 @@ import AppError from '@shared/errors/AppError';
 
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository';
 import FakeUserTokensRepository from '../repositories/fakes/FakeUserTokensRepository';
-import ResetPasswordService from './ResetPasswordService';
 
+import ResetPasswordService from './ResetPasswordService';
 
 let fakeUsersRepository: FakeUsersRepository;
 let fakeUserTokensRepository: FakeUserTokensRepository;
+
 let resetPassword: ResetPasswordService;
 
 describe('SendForgotPasswordEmail', () => {
@@ -19,7 +20,8 @@ describe('SendForgotPasswordEmail', () => {
       fakeUserTokensRepository,
     );
   });
-  it('should be able to reset password', async() => {
+
+  it('should be able to reset the password', async () => {
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
       email: 'johndoe@example.com',
@@ -33,10 +35,8 @@ describe('SendForgotPasswordEmail', () => {
       token,
     });
 
-    const updateUser = await fakeUsersRepository.findById(user.id);
+    const updatedUser = await fakeUsersRepository.findById(user.id);
 
-    expect(updateUser?.password).toBe('123123');
+    expect(updatedUser?.password).toBe('123123');
   });
-
 });
-

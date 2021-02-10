@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
+
 import CreateUserService from '@modules/users/services/CreateUserService';
 
-export default class UsersController {
+export default class SessionsController {
   public async create(request: Request, response: Response): Promise<Response> {
     const { name, email, password } = request.body;
 
@@ -14,6 +15,7 @@ export default class UsersController {
       password,
     });
 
+    // Com a atualização do TypeScript, isso se faz necessário
     const userWithoutPassword = {
       id: user.id,
       name: user.name,
